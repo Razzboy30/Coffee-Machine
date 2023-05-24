@@ -35,10 +35,6 @@ resources = {
 }
 
 
-
-coff = ''
-
-
 def start():
     user_q = input("​What would you like? (espresso/latte/cappuccino):")
     if user_q == "report":
@@ -56,7 +52,7 @@ def report():
     print(f'Milk : {resources["milk"]}ml')
     print(f'Coffee : {resources["coffee"]}ml')
     print(f'Money : ${resources["Money"]}')
-    start()
+   
 
 def mon():
     print("Please insert coins")
@@ -84,7 +80,6 @@ def coffee(CoffeT):
                 resources["coffee"]= resources["coffee"]- 18
                 print(f"Heres your change : ${round(eMoney - 1.50,2)}")
                 print("Here is your espresso, enjoy!")
-                start()
             else:
                 print("Sorry that's not enough money. Money refunded.")
 
@@ -102,9 +97,8 @@ def coffee(CoffeT):
                 resources["water"]= resources["water"] - 200
                 resources["milk"]= resources["milk"] + 150
                 resources["coffee"]= resources["coffee"]- 24
-                print(f"Heres your change : ${eMoney - 2.50}")
+                print(f"Heres your change : ${round(eMoney - 2.50,2)}")
                 print("Here is your latte, enjoy!")
-                start()
             else:
                 print("Sorry that's not enough money. Money refunded.")
 
@@ -122,13 +116,22 @@ def coffee(CoffeT):
                 resources["water"]= resources["water"] - 250
                 resources["milk"]= resources["milk"] + 100
                 resources["coffee"]= resources["coffee"]- 24
-                print(f"Heres your change : ${eMoney - 3}")
+                print(f"Heres your change : ${round(eMoney - 3,2)}")
                 print("Here is your cappuccino, enjoy!")
-                start()
             else:
                 print("Sorry that's not enough money. Money refunded.")
     else:
         print("no")
 
 
-start()
+is_on = True
+
+while(is_on):
+    user_q = input("​What would you like? (espresso/latte/cappuccino):")
+    if user_q == "report":
+        report()
+    elif user_q == "off":
+        print("Bye!")
+        is_on = False
+    elif user_q == "espresso" or user_q == "latte" or user_q == "cappuccino":
+        coffee(user_q)
