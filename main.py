@@ -79,7 +79,7 @@ def coffee(CoffeT):
                 resources["water"]= resources["water"] - 50
                 resources["coffee"]= resources["coffee"]- 18
                 print(f"Heres your change : ${round(eMoney - 1.50,2)}")
-                print("Here is your espresso, enjoy!")
+                print("Here is your espresso☕, enjoy!")
             else:
                 print("Sorry that's not enough money. Money refunded.")
 
@@ -98,7 +98,7 @@ def coffee(CoffeT):
                 resources["milk"]= resources["milk"] + 150
                 resources["coffee"]= resources["coffee"]- 24
                 print(f"Heres your change : ${round(eMoney - 2.50,2)}")
-                print("Here is your latte, enjoy!")
+                print("Here is your latte☕, enjoy!")
             else:
                 print("Sorry that's not enough money. Money refunded.")
 
@@ -117,7 +117,7 @@ def coffee(CoffeT):
                 resources["milk"]= resources["milk"] + 100
                 resources["coffee"]= resources["coffee"]- 24
                 print(f"Heres your change : ${round(eMoney - 3,2)}")
-                print("Here is your cappuccino, enjoy!")
+                print("Here is your cappuccino☕, enjoy!")
             else:
                 print("Sorry that's not enough money. Money refunded.")
     else:
